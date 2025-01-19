@@ -161,6 +161,80 @@ header {
   font-size: var(--font-size);
 }
 
+/* Facts related style */
+#facts {
+  max-width: var(--primary-width);
+  margin: var(--margin-primary);
+  padding: 3rem 0;
+}
+
+.facts-text {
+  margin: 2rem;
+}
+
+.facts-description {
+  color: var(--dark-02);
+}
+
+.facts-title {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.facts-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+
+.facts-card {
+  border: 3px solid var(--primary-color);
+  text-align: center;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+/* Sponsors related styles */
+#sponsor {
+  max-width: var(--primary-width);
+  margin: 3rem auto;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.sponsor-title {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+}
+
+.sponsor-text {
+  margin: 3rem;
+}
+.sponsor-text p {
+  color: var(--dark-02);
+}
+
+.sponsor-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 3rem 0;
+}
+
+.sponsor-images img {
+  filter: grayscale(100%);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-background-color);
+  width: var(--primary-width);
+  margin: 3rem auto;
+  text-align: center;
+  color: var(--dark-02);
+  padding: 1rem 0;
+}
+
 /* RESPONSIVE RELATED STYLES */
 
 @media screen and (max-width: 576px) {
@@ -169,6 +243,11 @@ header {
   #experience {
     flex-direction: column;
     text-align: center;
+  }
+
+  .facts-cards,
+  .sponsor-images {
+    grid-template-columns: 1fr;
   }
 
   /* navbar section */
@@ -185,8 +264,13 @@ header {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  /* #banner .banner-image img {
-    width: 22rem;
-    height: auto;
-  } */
+
+  /* Sponsor related style */
+  .sponsor-images img {
+    margin: 1rem auto;
+  }
+
+  footer {
+    width: 100%;
+  }
 }
