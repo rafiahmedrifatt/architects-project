@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-  --primary-color: black;
-  --font-weight: 500px;
+  --font-weight: 600;
+  --font-size: 3rem;
   --primary-color: #ff900e;
   --primary-background-color: rgba(255, 144, 14, 0.1);
   --dark-01: rgba(19, 19, 19, 1);
   --dark-02: rgba(73, 72, 72, 1);
-  --primary-width: 80rem;
+  --primary-width: 85rem;
   --margin-primary: 0 auto;
 }
 
@@ -40,7 +40,12 @@ header {
   margin: 0 auto;
 }
 
+.logo {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
 .navbar {
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -48,10 +53,6 @@ header {
   margin: 0 10px;
   text-decoration: none;
   color: var(--dark-02);
-}
-
-.navbar h3 {
-  font-weight: 600;
 }
 
 /* banner related style */
@@ -63,8 +64,9 @@ header {
 }
 
 .banner-title {
-  font-weight: 600;
+  font-weight: var(--font-weight);
   margin-bottom: 1rem;
+  font-size: var(--font-size);
 }
 
 #banner .banner-text {
@@ -73,7 +75,7 @@ header {
 }
 
 #banner .banner-image {
-  width: 80%;
+  width: 60%;
   height: auto;
   margin: 1rem auto;
 }
@@ -102,7 +104,7 @@ header {
 
 .features-title {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: var(--font-weight);
 }
 
 .features-text #ofOur {
@@ -114,11 +116,57 @@ header {
 .features-text p {
   color: var(--dark-02);
 }
+
+/* Experience related styles */
+#experience {
+  height: 67rem;
+  align-items: center;
+  gap: 5rem;
+  max-width: var(--primary-width);
+  margin: var(--margin-primary);
+  margin-top: 5rem;
+}
+
+.experience-title {
+  font-size: 3rem;
+  font-weight: var(--font-weight);
+  border-left: 5px solid var(--primary-color);
+}
+
+.experience-text p {
+  color: var(--dark-02);
+  font-size: 1rem;
+}
+
+.experience-card {
+  padding: 3rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 0.7rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.experience-card-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight);
+}
+
+.experience-badge {
+  position: relative;
+  margin-top: -100px;
+  padding: 2rem;
+}
+
+.experience-badge span {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+}
+
 /* RESPONSIVE RELATED STYLES */
 
 @media screen and (max-width: 576px) {
   .navbar,
-  .features {
+  .features,
+  #experience {
     flex-direction: column;
     text-align: center;
   }
@@ -126,6 +174,9 @@ header {
   /* navbar section */
   .navbar a {
     display: block;
+  }
+  #banner .banner-image {
+    width: 80%;
   }
 
   /* features section */
