@@ -3,10 +3,26 @@
 :root {
   --primary-color: black;
   --font-weight: 500px;
+  --primary-color: #ff900e;
   --primary-background-color: rgba(255, 144, 14, 0.1);
   --dark-01: rgba(19, 19, 19, 1);
   --dark-02: rgba(73, 72, 72, 1);
-  --primary-width: 64rem;
+  --primary-width: 80rem;
+  --margin-primary: 0 auto;
+}
+
+/* Shared styles */
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: none;
+}
+
+.flex {
+  display: flex;
 }
 
 * {
@@ -25,7 +41,6 @@ header {
 }
 
 .navbar {
-  display: flex;
   justify-content: space-around;
 }
 
@@ -33,7 +48,6 @@ header {
   margin: 0 10px;
   text-decoration: none;
   color: var(--dark-02);
-  /* font-weight: 600; */
 }
 
 .navbar h3 {
@@ -43,10 +57,14 @@ header {
 /* banner related style */
 
 #banner {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
+}
+
+.banner-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 #banner .banner-text {
@@ -54,24 +72,70 @@ header {
   text-align: center;
 }
 
-#banner .banner-image img {
-  width: 60rem;
-  margin: 2.5rem auto;
-  margin-top: rem;
+#banner .banner-image {
+  width: 80%;
+  height: auto;
+  margin: 1rem auto;
 }
 
+#banner .banner-image img {
+  width: 100%;
+}
+
+/* features related styles */
+.features {
+  align-items: center;
+  max-width: var(--primary-width);
+  margin: var(--margin-primary);
+  margin-top: 5rem;
+}
+
+.image-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.features-text {
+  margin: 0 5rem;
+  width: 50%;
+}
+
+.features-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.features-text #ofOur {
+  color: var(--dark-02);
+}
+.features #features {
+  color: var(--primary-color);
+}
+.features-text p {
+  color: var(--dark-02);
+}
 /* RESPONSIVE RELATED STYLES */
 
 @media screen and (max-width: 576px) {
-  .navbar {
+  .navbar,
+  .features {
     flex-direction: column;
     text-align: center;
   }
+
+  /* navbar section */
   .navbar a {
     display: block;
   }
 
-  #banner .banner-image img {
-    width: 22rem;
+  /* features section */
+
+  .image-collage {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+  /* #banner .banner-image img {
+    width: 22rem;
+    height: auto;
+  } */
 }
