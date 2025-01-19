@@ -1,9 +1,77 @@
-/* :root {
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
   --primary-color: black;
-  --font-weight: 600px;
+  --font-weight: 500px;
+  --primary-background-color: rgba(255, 144, 14, 0.1);
+  --dark-01: rgba(19, 19, 19, 1);
+  --dark-02: rgba(73, 72, 72, 1);
+  --primary-width: 64rem;
 }
 
-h3 {
-  background-color: var(--primary-color);
-  font-weight: var(--font-weight);
-} */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* header related styles */
+
+header {
+  background-color: var(--primary-background-color);
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--dark-02);
+  /* font-weight: 600; */
+}
+
+.navbar h3 {
+  font-weight: 600;
+}
+
+/* banner related style */
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#banner .banner-text {
+  max-width: var(--primary-width);
+  text-align: center;
+}
+
+#banner .banner-image img {
+  width: 60rem;
+  margin: 2.5rem auto;
+  margin-top: rem;
+}
+
+/* RESPONSIVE RELATED STYLES */
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar a {
+    display: block;
+  }
+
+  #banner .banner-image img {
+    width: 22rem;
+  }
+}
