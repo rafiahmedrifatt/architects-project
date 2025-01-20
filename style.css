@@ -95,6 +95,7 @@ header {
 .image-collage {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
 .features-text {
@@ -119,7 +120,6 @@ header {
 
 /* Experience related styles */
 #experience {
-  height: 67rem;
   align-items: center;
   gap: 5rem;
   max-width: var(--primary-width);
@@ -149,6 +149,10 @@ header {
   font-size: 1.5rem;
   font-weight: var(--font-weight);
 }
+
+/* .experience-image {
+  position: relative;
+} */
 
 .experience-badge {
   position: relative;
